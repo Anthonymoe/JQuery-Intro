@@ -21,7 +21,16 @@ function getInfo(){
     }
     //push user into cohort
     emirp.push( user );
-    console.log( emirp );
+    //put the cohort list on DOM
+    //target ul element
+    let el = $( '#cohortOut' );
+    //empty ul
+    el.empty();
+    //loop through the cohort array
+    for( let i=0; i<emirp.length; i++ ){
+    //append each user to the ul on DOM
+    el.append ( '<li>' + emirp[i].name + '</li>' );
+    }//end for
     //empty the nameIn element
     $( '#nameIn' ).val( '' );//set the value for this element 
 }//end getInfo
@@ -34,4 +43,3 @@ function otherTagClick(){
     console.log( 'clicked on a classy element' );
 }
 
-//git test 
