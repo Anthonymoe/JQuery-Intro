@@ -23,7 +23,7 @@ function getInfo(){
     emirp.push( user );
     //put the cohort list on DOM
     //target ul element
-    let el = $( '#cohortOut' );
+    let el = $( '#cohortOut' );// now the variable el = targeting chortOut on html (cohortOut is an unordered list)
     //empty ul
     el.empty();
     //loop through the cohort array
@@ -31,6 +31,13 @@ function getInfo(){
     //append each user to the ul on DOM
     el.append ( '<li>' + emirp[i].name + '</li>' );
     }//end for
+    //update cohort count
+    //target element
+    let count = $( '#cohortCount' );
+    //empty
+    count.empty();
+    //append
+    count.append( emirp.length );
     //empty the nameIn element
     $( '#nameIn' ).val( '' );//set the value for this element 
 }//end getInfo
